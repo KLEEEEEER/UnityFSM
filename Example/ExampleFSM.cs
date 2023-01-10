@@ -10,13 +10,15 @@ namespace Kleeeeeer.FSM
         private void Awake()
         {
             AddState(State.Example, new ExampleState(this, _testComponent));
+            AddState(State.SecondExample, new SecondExampleState(this));
 
             TransitionToState(State.Example);
         }
 
         public enum State
         {
-           Example 
+           Example,
+           SecondExample
         }
     }
 }

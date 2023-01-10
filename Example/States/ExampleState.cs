@@ -11,6 +11,7 @@ namespace Kleeeeeer.FSM
         public override void EnterState() 
         {
             _exampleComponent.TestMethod();
+            fsm.TransitionToState(ExampleFSM.State.SecondExample);
         }
     }
 }
